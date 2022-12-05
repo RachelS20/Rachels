@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: ${IMAGE}
+    secrets:
+      - db-password
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
+      - POSTGRES_DB=${NAME}
+      
+    
+secrets:
+  db-password:
+    file: password.txt
