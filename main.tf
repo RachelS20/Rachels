@@ -22,8 +22,4 @@ module "Recover" {
 
 }
 
-output "data" {
-  value = module.Rachels.out
-  
-}
 
